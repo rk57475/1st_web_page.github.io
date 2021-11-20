@@ -1,0 +1,72 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        
+        int x=scan.nextInt();
+        int i=1;
+        
+        while(x>0){
+            if ((3*i+2)%4!=0){
+                System.out.print((3*i+2));
+                System.out.print(" ");
+                x--;
+            }
+            i++;
+        }
+    }
+}
+
+
+9305937113
+aryan gupta
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int n= scan.nextInt();
+        int fact = 1;
+        int answer=0;
+        
+        while(n>0){
+            answer +=(n%10)*fact;
+            fact*=2;
+            n/=10;
+        }
+        System.out.println(answer);
+    }
+}
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+         Scanner scan = new Scanner(System.in);
+        int basic = scan.nextInt();
+        String grade = scan.next();
+        
+        int total = basic +(int)Math.ceil(0.2*basic) + (int)Math.ceil(0.5*basic) - (int)Math.ceil(0.11*basic);
+        if(grade.equals("A")){
+            System.out.println(total+1700);
+        }
+        if(grade.equals("B")){
+            System.out.println(total+1500);
+        }
+        if(grade.equals("C")){
+            System.out.println(total+1300);
+        }
+    }
+}
